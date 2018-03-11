@@ -1,0 +1,19 @@
+{
+  "name": "command_line_hangman_game",
+  "version": "1.0.0",
+  "description": "Command Line Hangman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tricialeav/command_line_hangman_game.git"
+  },
+  "author": "Tricia Leavitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tricialeav/command_line_hangman_game/issues"
+  },
+  "homepage": "https://github.com/tricialeav/command_line_hangman_game#readme"
+}
