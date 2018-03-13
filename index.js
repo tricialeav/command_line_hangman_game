@@ -1,8 +1,8 @@
-const Word = require('./word'); 
+const Word = require('./Word'); 
 const inquirer = require('inquirer');
 const guessLeft = 10; 
-let testWord = 'farts';
-let newWord = new Word(testWord);
+let wordList = ['back to the future', 'wonder woman', ];
+
 
 inquirer.prompt([
     {
@@ -11,9 +11,6 @@ inquirer.prompt([
         message: 'Guess a letter!'
     }
 ]).then(answers => { 
-     
-    // if (Letter.guessed === false){
-    //     guessLeft -= 1; 
-    //     console.log('That is incorrect. You have ' + guessLeft + ' guess(es) remaining.');
-    // }
+    this.newWord = new Word(wordList, answers.guess);
+    this.newWord.printChars();
 });

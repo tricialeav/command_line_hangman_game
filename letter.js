@@ -1,23 +1,21 @@
-const Letter = function(character) {
-    this.character = character; 
+const Letter = function(character, guessedLetter) {
+    this.character = character;  
+    this.guessedLetter = guessedLetter; 
     this.correctGuess = false; 
 }
 
 Letter.prototype.isGuessed = function() {
-    if (correctGuess === true) {
-        console.log(character + ''); 
+    if (this.correctGuess === true) {
+        return (this.character + ' '); 
     } else {
-        console.log('*' + '')
+         return ('*' + ' ');
     }
 }
 
-Letter.prototype.check = function (guessedCharacter) {
-    if (guessedCharacter === character) {
-        correctGuess = true;
-         console.log('[LOG] This character is in the hidden word. Guessed = true.')
-    } else {
-        console.log('[LOG] This character is not in the hidden word.')
-    }
+Letter.prototype.check = function () {
+    if (this.guessedLetter === this.character) {
+        this.correctGuess = true;
+    } 
 }
 
 module.exports = Letter; 
