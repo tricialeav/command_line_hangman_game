@@ -1,7 +1,7 @@
 const Word = require('./Word'); 
 const inquirer = require('inquirer');
 const guessLeft = 10; 
-let wordList = ['back to the future', 'wonder woman', ];
+let wordList = ['back to the future', 'wonder woman'];
 
 
 inquirer.prompt([
@@ -11,6 +11,7 @@ inquirer.prompt([
         message: 'Guess a letter!'
     }
 ]).then(answers => { 
-    this.newWord = new Word(wordList, answers.guess);
+    let randomWord = Math.floor(Math.random() * (wordList.length + 1));
+    this.newWord = new Word(wordList[randomWord], answers.guess);
     this.newWord.printChars();
 });
